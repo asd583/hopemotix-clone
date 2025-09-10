@@ -1,18 +1,14 @@
-// script.js
+const SET = [123456789, 234567890, 345678901]; // Example SET array
 
-document.getElementById('generate2D').addEventListener('click', generate2D);
-document.getElementById('generate3D').addEventListener('click', generate3D);
+// Step 1: Get the last digit of the first number in SET
+const firstNumberLastDigit = SET[0].toString().slice(-1);  // Last digit of the first number
 
-function generate2D() {
-    const number = Math.floor(Math.random() * 90) + 10; // Generates a number between 10 and 99
-    displayResult(number);
-}
+// Step 2: Get the digit before the decimal in the fifth number
+const fifthNumber = SET[4].toString(); // Get the fifth number (0-indexed)
+const digitBeforeDecimal = fifthNumber.charAt(4); // Fifth number's digit before the decimal
 
-function generate3D() {
-    const number = Math.floor(Math.random() * 900) + 100; // Generates a number between 100 and 999
-    displayResult(number);
-}
+// Step 3: Combine these two digits
+const result = firstNumberLastDigit + digitBeforeDecimal;
 
-function displayResult(number) {
-    document.getElementById('lotteryNumber').innerHTML = number;
-}
+// Show the result on the website
+document.getElementById('output').innerHTML = result;
