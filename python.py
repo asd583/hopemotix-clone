@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 
 # Sample HTML content (you can load your HTML file here)
 html_content =https://www.set.or.th/en/market/product/stock/overview """
-<table id="stockTable">
+<table id="table-jph2e9bjux">
     <tr>
         <th>Stock</th>
         <th>Price</th>
