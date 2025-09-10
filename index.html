@@ -1,8 +1,3 @@
-<div class="lottery">
-    <div class="result">
-        <span class="stock-overview-tab">47</span>
-    </div>
-</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +14,10 @@
 
     <script>
         // Assuming you have the HTML of the website stored in a string variable
-        const websiteHtml = `
-            <div class="lottery">
+        const websiteHtml =https://www.set.or.th/en/market/product/stock/overview `
+            <div class="stock-overview-tab">
                 <div class="result">
-                    <span class="lottery-number">47</span>
+                    <span class="">47</span>
                 </div>
             </div>
         `;
@@ -32,7 +27,7 @@
         const doc = parser.parseFromString(websiteHtml, 'text/html');
 
         // Use getElementsByClassName to get the elements by class name
-        const lotteryNumbers = doc.getElementsByClassName('lottery-number');
+        const lotteryNumbers = doc.getElementsByClassName('stock-overview-tab');
 
         // Get the first element (or loop through if you need multiple results)
         const lotteryNumber = lotteryNumbers[0].textContent;
